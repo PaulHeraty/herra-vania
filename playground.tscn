@@ -25,6 +25,48 @@ texture = SubResource("GradientTexture2D_rupst")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/StaticBody2D"]
 shape = SubResource("RectangleShape2D_wt17y")
 
+[node name="Sprite2D5" type="Sprite2D" parent="."]
+position = Vector2(344, 202)
+scale = Vector2(2.11, 2)
+texture = SubResource("GradientTexture2D_rupst")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D5/StaticBody2D"]
+shape = SubResource("RectangleShape2D_wt17y")
+
+[node name="Sprite2D6" type="Sprite2D" parent="."]
+position = Vector2(46, 202)
+scale = Vector2(2, 2)
+texture = SubResource("GradientTexture2D_rupst")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D6/StaticBody2D"]
+scale = Vector2(1.0000001, 1.0000001)
+shape = SubResource("RectangleShape2D_wt17y")
+
+[node name="Sprite2D7" type="Sprite2D" parent="."]
+position = Vector2(117.527145, 230.03976)
+rotation = 0.5235988
+scale = Vector2(4.016617, 2.0143194)
+texture = SubResource("GradientTexture2D_rupst")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D7/StaticBody2D"]
+shape = SubResource("RectangleShape2D_wt17y")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(240, -11)
+scale = Vector2(16, 1.375)
+texture = SubResource("GradientTexture2D_rupst")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Sprite2D4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D4/StaticBody2D"]
+shape = SubResource("RectangleShape2D_wt17y")
+
 [node name="Sprite2D2" type="Sprite2D" parent="."]
 position = Vector2(-1, 131)
 scale = Vector2(0.9375, 9.1875)
@@ -36,7 +78,7 @@ texture = SubResource("GradientTexture2D_rupst")
 shape = SubResource("RectangleShape2D_wt17y")
 
 [node name="Sprite2D3" type="Sprite2D" parent="."]
-position = Vector2(482, 130)
+position = Vector2(482.00003, 130)
 scale = Vector2(0.9375, 9.1875)
 texture = SubResource("GradientTexture2D_rupst")
 
