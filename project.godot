@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="HerraVania"
-run/main_scene="uid://ccviph1xw72fk"
+run/main_scene="uid://b0d54g76q27b1"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="uid://psxcamgxpybp"
 
