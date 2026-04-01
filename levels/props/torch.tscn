@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://bvvvhv2lphxy2"]
+[gd_scene load_steps=11 format=3 uid="uid://bvvvhv2lphxy2"]
 
 [ext_resource type="Texture2D" uid="uid://cvae41t3vshha" path="res://levels/tilesets/sprites/forgotten_forest_example_tileset.png" id="1_cxyc4"]
+[ext_resource type="Script" uid="uid://chx4f7rrfk23m" path="res://general/scripts/light_flicker.gd" id="2_dnf12"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dnf12"]
 atlas = ExtResource("1_cxyc4")
@@ -45,8 +46,28 @@ animations = [{
 "speed": 12.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_cxyc4"]
+offsets = PackedFloat32Array(0, 0.36, 0.7133333, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0.98878354, 0.7133261, 0, 1, 0.5067887, 0.09475971, 0, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_dnf12"]
+gradient = SubResource("Gradient_cxyc4")
+width = 256
+height = 256
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(1, 0.5)
+
 [node name="Torch" type="AnimatedSprite2D"]
 sprite_frames = SubResource("SpriteFrames_cl4he")
 autoplay = "default"
 frame_progress = 0.9447309
 offset = Vector2(0, -32)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0, -30)
+energy = 0.5
+texture = SubResource("GradientTexture2D_dnf12")
+script = ExtResource("2_dnf12")
+flicker_intensity = 0.2
+flicker_frequency = 0.1

@@ -53,3 +53,7 @@ position = Vector2(504, 168)
 
 [node name="Torch5" parent="Props" instance=ExtResource("4_r7adf")]
 position = Vector2(800, 136)
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+color = Color(0.09218758, 0.10625774, 0.09086437, 1)
+blend_mode = 2

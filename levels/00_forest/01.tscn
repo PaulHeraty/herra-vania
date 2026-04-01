@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=4 uid="uid://b0d54g76q27b1"]
+[gd_scene load_steps=10 format=4 uid="uid://b0d54g76q27b1"]
 
 [ext_resource type="TileSet" uid="uid://3qhb8c8a6yyo" path="res://levels/tilesets/forgotten_forest.tres" id="1_fvrtv"]
 [ext_resource type="PackedScene" uid="uid://bu8nylgi15ir7" path="res://player/player.tscn" id="2_pu3y4"]
 [ext_resource type="Script" uid="uid://dl0km6grdp4yg" path="res://general/scripts/level_bounds.gd" id="3_1pu88"]
 [ext_resource type="PackedScene" uid="uid://clqjo360eqaak" path="res://general/level_transition/level_transition.tscn" id="4_vhcel"]
 [ext_resource type="PackedScene" uid="uid://7ol538bbr2hu" path="res://levels/props/plant.tscn" id="5_qmxb0"]
+[ext_resource type="Texture2D" uid="uid://dtwbf68i6acrd" path="res://levels/tilesets/sprites/light_stream.jpg" id="6_chwhs"]
 
 [sub_resource type="Gradient" id="Gradient_vhcel"]
 colors = PackedColorArray(0.627451, 0.827451, 0.78039217, 0.65882355, 0.28235295, 0.45490196, 0.5254902, 0)
@@ -15,6 +16,10 @@ width = 256
 height = 256
 fill_from = Vector2(0, 1)
 fill_to = Vector2(0, 0)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_chwhs"]
+blend_mode = 1
+light_mode = 1
 
 [node name="01" type="Node2D"]
 
@@ -225,3 +230,79 @@ speed_scale = 1.2
 position = Vector2(830, 163)
 speed_scale = 0.8
 flip_h = true
+
+[node name="Parallax2D7" type="Parallax2D" parent="."]
+scroll_scale = Vector2(1.1, 1)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Parallax2D7"]
+modulate = Color(1.1638972, 0.86939543, 0.3528848, 0.25882354)
+z_index = 4
+material = SubResource("CanvasItemMaterial_chwhs")
+position = Vector2(313.00006, -107.000015)
+rotation = 0.2617994
+scale = Vector2(0.36702713, 0.99999994)
+texture = ExtResource("6_chwhs")
+offset = Vector2(0, 256)
+
+[node name="Sprite2D3" type="Sprite2D" parent="Parallax2D7"]
+modulate = Color(1.1638972, 0.86939543, 0.3528848, 0.16078432)
+z_index = 4
+material = SubResource("CanvasItemMaterial_chwhs")
+position = Vector2(829.7821, -117.22451)
+rotation = 0.17453292
+scale = Vector2(0.470216, 0.99999994)
+texture = ExtResource("6_chwhs")
+offset = Vector2(0, 256)
+
+[node name="Sprite2D4" type="Sprite2D" parent="Parallax2D7"]
+modulate = Color(1.1638972, 0.86939543, 0.3528848, 0.20392157)
+z_index = 4
+material = SubResource("CanvasItemMaterial_chwhs")
+position = Vector2(1120, -97.00003)
+rotation = 0.34906584
+scale = Vector2(0.7778997, 0.99999994)
+texture = ExtResource("6_chwhs")
+offset = Vector2(0, 256)
+
+[node name="Parallax2D8" type="Parallax2D" parent="."]
+scroll_scale = Vector2(1.2, 1)
+
+[node name="Sprite2D5" type="Sprite2D" parent="Parallax2D8"]
+modulate = Color(1.1638972, 0.86939543, 0.3528848, 0.13725491)
+z_index = 4
+material = SubResource("CanvasItemMaterial_chwhs")
+position = Vector2(317, -108.000015)
+rotation = 0.2617994
+scale = Vector2(1.0036764, 0.9999999)
+texture = ExtResource("6_chwhs")
+offset = Vector2(0, 256)
+
+[node name="Sprite2D7" type="Sprite2D" parent="Parallax2D8"]
+modulate = Color(1.1638972, 0.86939543, 0.3528848, 0.13725491)
+z_index = 4
+material = SubResource("CanvasItemMaterial_chwhs")
+position = Vector2(561, -91.00001)
+rotation = 0.2617994
+scale = Vector2(0.572668, 0.9999999)
+texture = ExtResource("6_chwhs")
+offset = Vector2(0, 256)
+
+[node name="Sprite2D8" type="Sprite2D" parent="Parallax2D8"]
+modulate = Color(1.1638972, 0.86939543, 0.3528848, 0.13725491)
+z_index = 4
+material = SubResource("CanvasItemMaterial_chwhs")
+position = Vector2(836.00006, -119)
+rotation = 0.2617994
+scale = Vector2(0.76888865, 0.9999999)
+texture = ExtResource("6_chwhs")
+offset = Vector2(0, 256)
+
+[node name="Sprite2D6" type="Sprite2D" parent="Parallax2D8"]
+modulate = Color(1.1638972, 0.86939543, 0.3528848, 0.13725491)
+z_index = 4
+material = SubResource("CanvasItemMaterial_chwhs")
+position = Vector2(1067, -111.999954)
+rotation = 0.2617994
+scale = Vector2(1.0036764, 0.9999999)
+texture = ExtResource("6_chwhs")
+offset = Vector2(0, 256)
