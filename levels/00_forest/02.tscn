@@ -1,6 +1,7 @@
-[gd_scene load_steps=17 format=4 uid="uid://cphi5u6whsjh6"]
+[gd_scene load_steps=18 format=4 uid="uid://cphi5u6whsjh6"]
 
 [ext_resource type="Script" uid="uid://dl0km6grdp4yg" path="res://general/scripts/level_bounds.gd" id="1_epyyu"]
+[ext_resource type="PackedScene" uid="uid://b3pg1odsinyub" path="res://general/player_spawn/player_spawn.tscn" id="2_yy75x"]
 [ext_resource type="PackedScene" uid="uid://clqjo360eqaak" path="res://general/level_transition/level_transition.tscn" id="3_epyyu"]
 [ext_resource type="TileSet" uid="uid://3qhb8c8a6yyo" path="res://levels/tilesets/forgotten_forest.tres" id="3_o5ap7"]
 [ext_resource type="PackedScene" uid="uid://7ol538bbr2hu" path="res://levels/props/plant.tscn" id="4_o5ap7"]
@@ -62,6 +63,9 @@ script = ExtResource("1_epyyu")
 width = 1152
 height = 302
 metadata/_custom_type_script = "uid://dl0km6grdp4yg"
+
+[node name="PlayerSpawn" parent="." instance=ExtResource("2_yy75x")]
+position = Vector2(164, 112)
 
 [node name="LevelTransition" parent="." instance=ExtResource("3_epyyu")]
 position = Vector2(0, 192)

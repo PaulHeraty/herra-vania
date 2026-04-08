@@ -1,7 +1,7 @@
 [gd_scene load_steps=22 format=4 uid="uid://b0d54g76q27b1"]
 
 [ext_resource type="TileSet" uid="uid://3qhb8c8a6yyo" path="res://levels/tilesets/forgotten_forest.tres" id="1_fvrtv"]
-[ext_resource type="PackedScene" uid="uid://bu8nylgi15ir7" path="res://player/player.tscn" id="2_pu3y4"]
+[ext_resource type="PackedScene" uid="uid://b3pg1odsinyub" path="res://general/player_spawn/player_spawn.tscn" id="2_72pnk"]
 [ext_resource type="Script" uid="uid://dl0km6grdp4yg" path="res://general/scripts/level_bounds.gd" id="3_1pu88"]
 [ext_resource type="PackedScene" uid="uid://clqjo360eqaak" path="res://general/level_transition/level_transition.tscn" id="4_vhcel"]
 [ext_resource type="PackedScene" uid="uid://7ol538bbr2hu" path="res://levels/props/plant.tscn" id="5_qmxb0"]
@@ -98,14 +98,14 @@ width = 1184
 height = 302
 metadata/_custom_type_script = "uid://dl0km6grdp4yg"
 
+[node name="PlayerSpawn" parent="." instance=ExtResource("2_72pnk")]
+position = Vector2(81, 150)
+
 [node name="LevelTransition" parent="." instance=ExtResource("4_vhcel")]
 position = Vector2(1152, 192)
 size = 20
 location = 1
 target_level = "uid://cphi5u6whsjh6"
-
-[node name="Player" parent="." instance=ExtResource("2_pu3y4")]
-position = Vector2(80, 103)
 
 [node name="BGParallaxLayers" type="Node2D" parent="."]
 
