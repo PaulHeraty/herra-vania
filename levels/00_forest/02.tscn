@@ -78,6 +78,12 @@ size = 3
 location = 3
 target_level = "uid://dme284kac4o4c"
 
+[node name="LevelTransition3" parent="." instance=ExtResource("3_epyyu")]
+position = Vector2(1081, 197)
+size = 7
+location = 1
+target_level = "uid://b5tl0b5snh0f5"
+
 [node name="BGParallaxNodes" type="Node2D" parent="."]
 
 [node name="Parallax2D4" type="Parallax2D" parent="BGParallaxNodes"]

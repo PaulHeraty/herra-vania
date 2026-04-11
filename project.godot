@@ -19,6 +19,7 @@ config/icon="uid://psxcamgxpybp"
 
 SceneManager="*res://00_global/scene_manager/scene_manager.tscn"
 SaveManager="*res://00_global/save_manager.gd"
+Messages="*res://00_global/messages.gd"
 
 [display]
 
