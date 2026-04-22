@@ -130,7 +130,7 @@ offset_right = 61.0
 offset_bottom = 69.0
 linked_scene = "uid://b0d54g76q27b1"
 entrances_top = Array[float]([])
-entrances_right = Array[float]([3.2])
+entrances_right = Array[float]([2.6])
 entrances_bottom = Array[float]([])
 entrances_left = Array[float]([])
 
@@ -143,35 +143,48 @@ offset_right = 91.0
 offset_bottom = 69.0
 linked_scene = "uid://cphi5u6whsjh6"
 entrances_top = Array[float]([])
-entrances_right = Array[float]([3.075])
-entrances_bottom = Array[float]([6.8])
-entrances_left = Array[float]([3.2])
+entrances_right = Array[float]([2.725])
+entrances_bottom = Array[float]([6.4])
+entrances_left = Array[float]([2.6])
 
 [node name="MapNode3" parent="Control/PauseScreen/Map" instance=ExtResource("2_rd7dy")]
 modulate = Color(0.32031962, 0.4480524, 0.60861856, 1)
 layout_mode = 0
-offset_left = 67.0
+offset_left = 61.0
 offset_top = 70.0
-offset_right = 97.0
+offset_right = 91.0
 offset_bottom = 78.0
 linked_scene = "uid://dme284kac4o4c"
-entrances_top = Array[float]([2.0])
-entrances_right = Array[float]([])
+entrances_top = Array[float]([7.2])
+entrances_right = Array[float]([3.0])
 entrances_bottom = Array[float]([])
 entrances_left = Array[float]([])
 
 [node name="MapNode4" parent="Control/PauseScreen/Map" instance=ExtResource("2_rd7dy")]
 modulate = Color(0.9684175, 0.38230777, 0.53343934, 1)
 layout_mode = 0
-offset_left = 91.0
+offset_left = 92.0
 offset_top = 61.0
-offset_right = 105.0
+offset_right = 106.0
 offset_bottom = 69.0
 linked_scene = "uid://b5tl0b5snh0f5"
 entrances_top = Array[float]([])
-entrances_right = Array[float]([3.2750000000000004])
+entrances_right = Array[float]([3.0])
 entrances_bottom = Array[float]([])
-entrances_left = Array[float]([3.25])
+entrances_left = Array[float]([3.0])
+
+[node name="MapNode5" parent="Control/PauseScreen/Map" instance=ExtResource("2_rd7dy")]
+modulate = Color(0.32031962, 0.4480524, 0.60861856, 1)
+layout_mode = 0
+offset_left = 92.0
+offset_top = 70.0
+offset_right = 107.0
+offset_bottom = 91.0
+linked_scene = "uid://de30502546d2m"
+entrances_top = Array[float]([])
+entrances_right = Array[float]([3.4, 10.6, 16.0])
+entrances_bottom = Array[float]([])
+entrances_left = Array[float]([3.4])
 
 [node name="PlayerIndicator" type="Control" parent="Control/PauseScreen/Map"]
 unique_name_in_owner = true

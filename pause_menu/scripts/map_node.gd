@@ -76,28 +76,29 @@ func create_entrance_data(transitions: Array[LevelTransition]) -> void:
 	entrances_bottom.clear()
 	
 	for t in transitions:
+		var pos: Vector2 = (t.position - indicator_offset) / SCALE_FACTOR
 		if t.location == LevelTransition.SIDE.LEFT:
 			var offset: float = clampf(
-				self.size.y + (-t.global_position.y / SCALE_FACTOR),
-				2.0, self.size.y - 2.0
+				pos.y - 3,
+				2.0, self.size.y - 5.0
 			)
 			entrances_left.append(offset)
 		elif t.location == LevelTransition.SIDE.RIGHT:
 			var offset: float = clampf(
-				self.size.y + (-t.global_position.y / SCALE_FACTOR),
-				2.0, self.size.y - 2.0
+				pos.y - 3,
+				2.0, self.size.y - 5.0
 			)
 			entrances_right.append(offset)
 		elif t.location == LevelTransition.SIDE.TOP:
 			var offset: float = clampf(
-				t.global_position.y / SCALE_FACTOR,
-				2.0, self.size.x - 2.0
+				pos.x,
+				2.0, self.size.x - 5.0
 			)
 			entrances_top.append(offset)
 		elif t.location == LevelTransition.SIDE.BOTTOM:
 			var offset: float = clampf(
-				t.global_position.y / SCALE_FACTOR,
-				2.0, self.size.x - 2.0
+				pos.x,
+				2.0, self.size.x - 5.0
 			)
 			entrances_bottom.append(offset)
 	pass
