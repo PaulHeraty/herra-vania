@@ -42,6 +42,8 @@ target_area_name = "LevelTransition3"
 position = Vector2(512, 223)
 size = 6
 location = 1
+target_level = "uid://dfeuuwpk0783r"
+target_area_name = "LevelTransition2"
 
 [node name="SavePoint" parent="." instance=ExtResource("6_ft464")]
 position = Vector2(239, 226)

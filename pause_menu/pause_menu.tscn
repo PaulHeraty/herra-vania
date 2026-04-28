@@ -186,6 +186,32 @@ entrances_right = Array[float]([3.4, 10.6, 16.0])
 entrances_bottom = Array[float]([])
 entrances_left = Array[float]([3.4])
 
+[node name="MapNode6" parent="Control/PauseScreen/Map" instance=ExtResource("2_rd7dy")]
+modulate = Color(0.32031962, 0.4480524, 0.60861856, 1)
+layout_mode = 0
+offset_left = 108.0
+offset_top = 61.0
+offset_right = 138.0
+offset_bottom = 69.0
+linked_scene = "uid://dfeuuwpk0783r"
+entrances_top = Array[float]([])
+entrances_right = Array[float]([])
+entrances_bottom = Array[float]([11.2])
+entrances_left = Array[float]([3.0])
+
+[node name="MapNode7" parent="Control/PauseScreen/Map" instance=ExtResource("2_rd7dy")]
+modulate = Color(0.32031962, 0.4480524, 0.60861856, 1)
+layout_mode = 0
+offset_left = 108.0
+offset_top = 71.0
+offset_right = 129.0
+offset_bottom = 78.0
+linked_scene = "uid://coae8cyw1hkwu"
+entrances_top = Array[float]([11.2])
+entrances_right = Array[float]([])
+entrances_bottom = Array[float]([])
+entrances_left = Array[float]([2.0])
+
 [node name="PlayerIndicator" type="Control" parent="Control/PauseScreen/Map"]
 unique_name_in_owner = true
 layout_mode = 1
