@@ -1,26 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://dapnujwbdbved"]
+[gd_scene load_steps=11 format=4 uid="uid://dapnujwbdbved"]
 
 [ext_resource type="TileSet" uid="uid://3qhb8c8a6yyo" path="res://levels/tilesets/forgotten_forest.tres" id="1_d0svy"]
 [ext_resource type="Script" uid="uid://bh3vtf12guky3" path="res://title_screen/title_scene.gd" id="1_j4xaf"]
 [ext_resource type="PackedScene" uid="uid://bvvvhv2lphxy2" path="res://levels/props/torch.tscn" id="2_q8o57"]
 [ext_resource type="Texture2D" uid="uid://ci8cc0uhmvas8" path="res://title_screen/metroidvania_logo.png" id="3_q8o57"]
-
-[sub_resource type="Animation" id="Animation_q8o57"]
-resource_name = "start"
-length = 0.6
-step = 0.05
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45000002, 0.5, 0.55),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
-}
+[ext_resource type="Script" uid="uid://b8ldrsq0cktth" path="res://music/music_auto_trigger.gd" id="5_dnxku"]
+[ext_resource type="AudioStream" uid="uid://8oawdafbnfft" path="res://music/title_01.ogg" id="6_1wkvc"]
 
 [sub_resource type="Animation" id="Animation_j4xaf"]
 length = 0.001
@@ -52,6 +37,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [12, 13, 14, 15, 16, 17, 18, 19, 20, 21]
+}
+
+[sub_resource type="Animation" id="Animation_q8o57"]
+resource_name = "start"
+length = 0.6
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45000002, 0.5, 0.55),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_dnxku"]
@@ -226,3 +228,8 @@ text = "Load Slot 02"
 unique_name_in_owner = true
 layout_mode = 2
 text = "Load Slot 03"
+
+[node name="MusicAutoTrigger" type="Node" parent="."]
+script = ExtResource("5_dnxku")
+track = ExtResource("6_1wkvc")
+metadata/_custom_type_script = "uid://b8ldrsq0cktth"

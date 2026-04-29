@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=4 uid="uid://b5tl0b5snh0f5"]
+[gd_scene load_steps=8 format=4 uid="uid://b5tl0b5snh0f5"]
 
 [ext_resource type="Script" uid="uid://dl0km6grdp4yg" path="res://general/scripts/level_bounds.gd" id="1_sffi5"]
 [ext_resource type="PackedScene" uid="uid://b3pg1odsinyub" path="res://general/player_spawn/player_spawn.tscn" id="2_ft464"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://clqjo360eqaak" path="res://general/level_transition/level_transition.tscn" id="4_6pbiu"]
 [ext_resource type="PackedScene" uid="uid://bvvvhv2lphxy2" path="res://levels/props/torch.tscn" id="5_xkjev"]
 [ext_resource type="PackedScene" uid="uid://cb7hg35tvctui" path="res://general/save_point/save_point.tscn" id="6_ft464"]
+[ext_resource type="Script" uid="uid://b8ldrsq0cktth" path="res://music/music_auto_trigger.gd" id="7_dyqvw"]
 
 [node name="02Save" type="Node2D"]
 position = Vector2(0, -34)
@@ -55,3 +56,7 @@ position = Vector2(41, 225)
 
 [node name="Torch2" parent="Props" instance=ExtResource("5_xkjev")]
 position = Vector2(463, 227)
+
+[node name="MusicAutoTrigger" type="Node" parent="."]
+script = ExtResource("7_dyqvw")
+metadata/_custom_type_script = "uid://b8ldrsq0cktth"
