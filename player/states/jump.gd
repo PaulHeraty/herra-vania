@@ -1,6 +1,7 @@
 class_name PlayerStateJump extends PlayerState
 
 @export var jump_velocity: float = 450.0
+const JUMP = preload("uid://bcro5h16y85pc")
 
 # what happens when the state is initialized
 func init() -> void:
@@ -8,6 +9,8 @@ func init() -> void:
 	
 # what happen when you enter this state
 func enter() -> void:
+	VisualEffects.jump_dust(player.global_position)
+	Audio.play_spatial_sound(JUMP, player.global_position)
 	player.animation_player.play("jump")
 	player.animation_player.pause()
 	#player.add_debug_indicator(Color.LIME_GREEN)

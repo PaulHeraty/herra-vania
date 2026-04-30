@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://3qhb8c8a6yyo"]
+[gd_resource type="TileSet" format=3 uid="uid://3qhb8c8a6yyo"]
 
 [ext_resource type="Texture2D" uid="uid://cvae41t3vshha" path="res://levels/tilesets/sprites/forgotten_forest_example_tileset.png" id="1_uh0r3"]
 
