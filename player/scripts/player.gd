@@ -64,18 +64,20 @@ func _unhandled_input(event: InputEvent) -> void:
 		add_child(pause_menu)
 		return
 	
-	# Temp for testing
-	if event is InputEventKey and event.pressed:
-		if event.keycode == KEY_MINUS:
-			if Input.is_key_pressed(KEY_SHIFT):
-				max_hp -= 10
-			else:
-				hp -= 2
-		elif event.keycode == KEY_EQUAL:
-			if Input.is_key_pressed(KEY_SHIFT):
-				max_hp += 10
-			else:
-				hp += 2
+	# DEBUG
+	if OS.is_debug_build():
+		if event is InputEventKey and event.pressed:
+			if event.keycode == KEY_MINUS:
+				if Input.is_key_pressed(KEY_SHIFT):
+					max_hp -= 10
+				else:
+					hp -= 2
+			elif event.keycode == KEY_EQUAL:
+				if Input.is_key_pressed(KEY_SHIFT):
+					max_hp += 10
+				else:
+					hp += 2
+	# end DEBUG
 	
 	change_state(current_state.handle_inputs(event))
 	pass

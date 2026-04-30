@@ -148,7 +148,7 @@ func display_player_location() -> void:
 	var i : Control = %PlayerIndicator
 	var pos: Vector2 = position
 	pos += ((player.global_position - indicator_offset) / SCALE_FACTOR)
-	var clamp: Vector2 = Vector2(3,3)
-	pos = pos.clamp(position + clamp, position + size - clamp)
+	var clamped: Vector2 = Vector2(3,3)
+	pos = pos.clamp(position + clamped, position + size - clamped)
 	i.position = pos
 	pass
