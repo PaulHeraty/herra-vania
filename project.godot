@@ -21,6 +21,10 @@ boot_splash/show_image=false
 config/icon="uid://psxcamgxpybp"
 config/windows_native_icon="uid://psxcamgxpybp"
 
+[audio]
+
+buses/default_bus_layout="uid://c78ri3m5bg7bg"
+
 [autoload]
 
 SceneManager="*res://00_global/scene_manager/scene_manager.tscn"
@@ -100,6 +104,9 @@ pause={
 2d_physics/layer_1="Ground"
 2d_physics/layer_2="One Way Platform"
 2d_physics/layer_5="Player"
+2d_physics/layer_6="Enemy"
+2d_physics/layer_7="Breakable"
+2d_physics/layer_8="SlamBreakable"
 
 [rendering]
 

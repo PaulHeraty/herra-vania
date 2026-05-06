@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://d05037a8d0auu" path="res://player/scripts/player_camera.gd" id="8_8t03j"]
 [ext_resource type="Script" uid="uid://clg2ts60v0qgt" path="res://player/scripts/input_hints.gd" id="8_hg6s5"]
 [ext_resource type="Texture2D" uid="uid://b4vpoatmql3sd" path="res://player/sprites/input_icons.png" id="9_8t03j"]
+[ext_resource type="Script" uid="uid://ciktahfpqex64" path="res://general/scripts/attack_area.gd" id="11_2ieo8"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_boad6"]
 radius = 8.0
@@ -122,6 +123,9 @@ fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 0.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ebec5"]
+size = Vector2(60, 18)
+
 [node name="Player" type="CharacterBody2D" unique_id=1942526043 groups=["Player"]]
 z_index = 2
 collision_layer = 16
@@ -209,3 +213,17 @@ script = ExtResource("8_hg6s5")
 [node name="Sprite2D" type="Sprite2D" parent="InputHints" unique_id=1150724681]
 texture = ExtResource("9_8t03j")
 hframes = 16
+
+[node name="AttackArea" type="Area2D" parent="." unique_id=1689049604]
+unique_name_in_owner = true
+position = Vector2(0, -29)
+collision_layer = 0
+collision_mask = 96
+script = ExtResource("11_2ieo8")
+damage = 5.0
+metadata/_custom_type_script = "uid://ciktahfpqex64"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea" unique_id=1103116331]
+position = Vector2(30, 0)
+shape = SubResource("RectangleShape2D_ebec5")
+debug_color = Color(0.70196074, 0, 0.03873592, 0.41960785)
