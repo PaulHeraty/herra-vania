@@ -19,7 +19,6 @@ run/main_scene="uid://dapnujwbdbved"
 config/features=PackedStringArray("4.6", "Forward Plus")
 boot_splash/show_image=false
 config/icon="uid://psxcamgxpybp"
-config/windows_native_icon="uid://psxcamgxpybp"
 
 [audio]
 
