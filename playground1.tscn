@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cqbakbku44i31" path="res://levels/props/test_dummy/test_dummy.tscn" id="6_s1yow"]
 [ext_resource type="PackedScene" uid="uid://c8e5fsr3boiva" path="res://general/door_and_switch/door.tscn" id="6_x7gyk"]
 [ext_resource type="PackedScene" uid="uid://b2n81txdxi3w6" path="res://general/door_and_switch/switch.tscn" id="7_jcpon"]
+[ext_resource type="PackedScene" uid="uid://d07narldy1nqf" path="res://levels/props/test_dummy/spike_dummy.tscn" id="8_7rnvr"]
 [ext_resource type="Script" uid="uid://b8ldrsq0cktth" path="res://music/music_auto_trigger.gd" id="8_fimwc"]
 [ext_resource type="AudioStream" uid="uid://b8uv6pendx3cf" path="res://music/dungeon_01.ogg" id="9_denf2"]
 [ext_resource type="Script" uid="uid://c8boepwviqym1" path="res://general/scripts/damage_area.gd" id="10_hhjhr"]
@@ -31,7 +32,7 @@ height = 302
 metadata/_custom_type_script = "uid://dl0km6grdp4yg"
 
 [node name="PlayerSpawn" parent="." unique_id=752784556 instance=ExtResource("2_wwxj1")]
-position = Vector2(832, 216)
+position = Vector2(704, 224)
 
 [node name="TileMapLayer3" type="TileMapLayer" parent="." unique_id=121849050]
 modulate = Color(0.6271693, 0.61476886, 0.9073196, 1)
@@ -63,10 +64,10 @@ target_area_name = "LevelTransition2"
 [node name="Props" type="Node2D" parent="." unique_id=1267753710]
 
 [node name="Breakable2" parent="Props" unique_id=1382296561 instance=ExtResource("11_hhjhr")]
-position = Vector2(640, 216)
+position = Vector2(568, 216)
 
 [node name="Breakable" parent="Props" unique_id=383107783 instance=ExtResource("11_hhjhr")]
-position = Vector2(736, 216)
+position = Vector2(640, 216)
 
 [node name="Torch" parent="Props" unique_id=1434353212 instance=ExtResource("5_8adl0")]
 position = Vector2(376, 232)
@@ -79,6 +80,9 @@ position = Vector2(32, 232)
 
 [node name="TestDummy" parent="Props" unique_id=544026818 instance=ExtResource("6_s1yow")]
 position = Vector2(888, 232)
+
+[node name="SpikeDummy" parent="Props" unique_id=98319157 instance=ExtResource("8_7rnvr")]
+position = Vector2(784, 232)
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=222782529]
 visible = false
