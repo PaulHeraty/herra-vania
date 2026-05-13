@@ -44,6 +44,7 @@ var max_hp: float = 20.0 :
 		Messages.player_health_changed.emit(hp, max_hp)
 var dash: bool = false
 var double_jump: bool = false
+var jump_count: int = 0
 var ground_slam: bool = false
 var morph_roll: bool = false
 #endregion

@@ -7,6 +7,7 @@ func init() -> void:
 # what happen when you enter this state
 func enter() -> void:
 	player.animation_player.play("idle")
+	player.jump_count = 0
 	pass
 	
 # what happens when you exit this state

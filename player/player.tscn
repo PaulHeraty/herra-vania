@@ -455,5 +455,10 @@ shape = SubResource("CapsuleShape2D_rgyib")
 disabled = true
 debug_color = Color(0, 0.6, 0.69803923, 0.25490198)
 
-[node name="HurtAudio" type="AudioStreamPlayer2D" parent="." unique_id=1619919090]
+[node name="AudioStreams" type="Node2D" parent="." unique_id=1831824704]
+position = Vector2(0, -23)
+
+[node name="HurtAudio" type="AudioStreamPlayer2D" parent="AudioStreams" unique_id=1619919090]
+unique_name_in_owner = true
 stream = ExtResource("16_32hag")
+bus = &"SFX"
