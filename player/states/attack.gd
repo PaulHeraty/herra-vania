@@ -34,8 +34,8 @@ func exit() -> void:
 func handle_inputs(_event: InputEvent) -> PlayerState:
 	if _event.is_action_pressed("attack"):
 		timer = combo_time_window
-	#if _event.is_action_pressed("jump"):
-		#return jump
+	if _event.is_action_pressed("dash") and player.can_dash():
+		return dash
 	return next_state
 	
 # what happens during the process loop
