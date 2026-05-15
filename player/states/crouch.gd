@@ -17,10 +17,10 @@ func enter() -> void:
 	
 # what happens when you exit this state
 func exit() -> void:
-	player.collision_stand.disabled = false
-	player.collision_crouch.disabled = true
-	player.da_stand.disabled = false
-	player.da_crouch.disabled = true
+	player.collision_stand.set_deferred("disabled", false)
+	player.collision_crouch.set_deferred("disabled", true)
+	player.da_stand.set_deferred("disabled", false)
+	player.da_crouch.set_deferred("disabled", true)
 	pass
 	
 # what happens when an input is pressed?
