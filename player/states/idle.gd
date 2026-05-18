@@ -23,6 +23,8 @@ func handle_inputs(_event: InputEvent) -> PlayerState:
 		return attack
 	if _event.is_action_pressed("jump"):
 		return jump
+	if _event.is_action_pressed("action") and player.can_morph():
+		return ball
 	return next_state
 	
 # what happens during the process loop

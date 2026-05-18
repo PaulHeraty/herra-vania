@@ -4,7 +4,7 @@ class_name PlayerStateFall extends PlayerState
 @export var fall_gravity_multiplier: float = 1.165
 @export var jump_buffer_time: float = 0.2
 
-const LAND = preload("uid://4h6r56dcymuh")
+const LAND_AUDIO = preload("uid://4h6r56dcymuh")
 
 var coyote_timer: float = 0.0
 var buffer_timer: float = 0.0
@@ -54,6 +54,8 @@ func handle_inputs(_event: InputEvent) -> PlayerState:
 			return jump
 		else:
 			buffer_timer = jump_buffer_time
+	if _event.is_action_pressed("action") and player.can_morph():
+		return ball
 	return next_state
 	
 # what happens during the process loop
@@ -67,7 +69,7 @@ func process(_delta: float) -> PlayerState:
 func physics_process(_delta: float) -> PlayerState:
 	if player.is_on_floor():
 		VisualEffects.land_dust(player.global_position)
-		Audio.play_spatial_sound(LAND, player.global_position)
+		Audio.play_spatial_sound(LAND_AUDIO, player.global_position)
 
 		if buffer_timer > 0:
 			player.jump_count = 0

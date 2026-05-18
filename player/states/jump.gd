@@ -1,7 +1,7 @@
 class_name PlayerStateJump extends PlayerState
 
 @export var jump_velocity: float = 450.0
-const JUMP = preload("uid://bcro5h16y85pc")
+const JUMP_AUDIO = preload("uid://bcro5h16y85pc")
 
 # what happens when the state is initialized
 func init() -> void:
@@ -39,6 +39,8 @@ func handle_inputs(_event: InputEvent) -> PlayerState:
 		return attack
 	if _event.is_action_released("jump"):
 		return fall
+	if _event.is_action_pressed("action") and player.can_morph():
+		return ball
 	return next_state
 	
 # what happens during the process loop
@@ -63,7 +65,7 @@ func do_jump() -> void:
 			return
 	player.jump_count += 1
 	player.velocity.y = -jump_velocity
-	Audio.play_spatial_sound(JUMP, player.global_position)
+	Audio.play_spatial_sound(JUMP_AUDIO, player.global_position)
 	pass
 	
 func set_jump_frame() -> void:
