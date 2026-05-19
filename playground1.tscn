@@ -19,6 +19,7 @@
 [ext_resource type="Resource" uid="uid://iiwci2lbmy2a" path="res://00_global/visual_effects/hit_particle_settings/hit_wood_medium.tres" id="13_6pxdb"]
 [ext_resource type="Resource" uid="uid://blnfbd54oiq6q" path="res://00_global/visual_effects/hit_particle_settings/hit_wood_large.tres" id="15_ls7ee"]
 [ext_resource type="PackedScene" uid="uid://cb7hg35tvctui" path="res://general/save_point/save_point.tscn" id="19_wc8mc"]
+[ext_resource type="PackedScene" uid="uid://bdrw4tuj8gimq" path="res://general/ability_pickup/ability_pickup.tscn" id="20_ls7ee"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t7sib"]
 size = Vector2(128, 186)
@@ -142,3 +143,19 @@ shape = SubResource("RectangleShape2D_t7sib")
 
 [node name="SavePoint" parent="." unique_id=618527500 instance=ExtResource("19_wc8mc")]
 position = Vector2(813, 582)
+
+[node name="AbilityPickup" parent="." unique_id=1245402498 instance=ExtResource("20_ls7ee")]
+position = Vector2(414, 562)
+type = 3
+
+[node name="AbilityPickup2" parent="." unique_id=1276422880 instance=ExtResource("20_ls7ee")]
+position = Vector2(385, 561)
+type = 2
+
+[node name="AbilityPickup3" parent="." unique_id=2050437569 instance=ExtResource("20_ls7ee")]
+position = Vector2(442, 562)
+type = 1
+
+[node name="AbilityPickup4" parent="." unique_id=1086673391 instance=ExtResource("20_ls7ee")]
+position = Vector2(357, 561)
+type = 0

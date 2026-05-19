@@ -47,7 +47,7 @@ var dash_count: int = 0
 var double_jump: bool = false
 var jump_count: int = 0
 var ground_slam: bool = false
-var morph_roll: bool = true
+var morph_roll: bool = false
 var can_interact: bool = false
 #endregion
 
